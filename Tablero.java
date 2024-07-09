@@ -72,9 +72,8 @@ public class Tablero{
 
     public static void cambiar_turno(){
         bandera = 4;
-        for ( i = 0; i < 2; i++) {
-            aux[i] = new Casilla();
-        }
+        for ( i = 0; i < 2; i++) aux[i] = new Casilla();
+
     }
 
 
