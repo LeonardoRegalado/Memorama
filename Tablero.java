@@ -33,19 +33,16 @@ public class Tablero{
     public static int rango = 0, suma;
 
     public static void sumar_puntos(){
-        switch (String.valueOf(jugador)) {
-            case "false":
-            j2++;
-            suma++;
-                texto[2].setText(String.valueOf(j2));
-                break;
-            case "true":
+        if (jugador) {
             j1++;
-            suma++;
-                texto[4].setText(String.valueOf(j1));
-                break;
+            texto[4].setText(String.valueOf(j1));
+        }else{
+            j2++;
+            texto[2].setText(String.valueOf(j2));
         }
+        suma++;
     }
+
     public static void marcador(){
         Timer timer = new Timer(1000, new ActionListener() {
             @Override
@@ -260,3 +257,4 @@ public class Tablero{
         ventana.setVisible(true);
     }   
 }                                                                                                                                               
+
