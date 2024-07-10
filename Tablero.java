@@ -160,7 +160,7 @@ public class Tablero{
             texto[6].setText("Jugador 1");
         }
     }
-
+    //Codigo central, genera los eventos de cada boton dentro del tablero.
     public static void inicializar(){
         for ( i = 0; i < 8; i++) {
             for ( j = 0; j < 5; j++){  
