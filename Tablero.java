@@ -17,7 +17,7 @@ import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
 public class Tablero{  
-    public static int eleccion,a,b,i,j,validar = 0,j1,j2;
+    public static int eleccion,i,j,validar = 0,j1,j2;
     public static Random numero = new Random();
     public static Casilla cartas[][] = new Casilla[8][5];
     public static ImageIcon seleccion[][] = new ImageIcon[8][5];
@@ -70,9 +70,7 @@ public class Tablero{
     public static void cambiar_turno(){
         bandera = 4;
         for ( i = 0; i < 2; i++) aux[i] = new Casilla();
-        
     }
-
 
     public static void voltear() {
         Timer timer = new Timer(1600, new ActionListener() {
@@ -208,8 +206,8 @@ public class Tablero{
         agregar_cartas();
         rango = 40;
         int num = 0;
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 5; j++) {
+        for ( i = 0; i < 8; i++) { 
+            for ( j = 0; j < 5; j++) {
                 rango--;
                 if (nombres.size() != 1) {
                     num = numero.nextInt(rango);
