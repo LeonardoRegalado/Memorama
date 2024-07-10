@@ -27,7 +27,7 @@ public class Tablero{
     public static JLabel texto[] = new JLabel[8];
     public static JFrame resultado = new JFrame("Resultado");
     static ArrayList<String> nombres = new ArrayList<>();
-    public static int bandera = 0,turnos;
+    public static int controlador = 0,turnos;
     public static boolean jugador = false;
     public static ImageIcon fondos = new ImageIcon("play/memorama/fondo.jpg");
     public static int rango, suma;
@@ -68,7 +68,7 @@ public class Tablero{
     }
 
     public static void cambiar_turno(){
-        bandera = 4;
+        controlador = 4;
         for ( i = 0; i < 2; i++) aux[i] = new Casilla();
     }
 
@@ -150,9 +150,9 @@ public class Tablero{
         }
         aux[turnos] = actual;
         turnos++;
-        bandera++;//5
-        bandera = bandera % 4;
-        if (bandera <= 0) { 
+        controlador++;//5
+        controlador = controlador % 4;
+        if (controlador <= 0) { 
             jugador = !(jugador); 
         }
         if (jugador) {
@@ -190,7 +190,7 @@ public class Tablero{
                             cambiar_turno();   //Si coinciden las imagenes
                             sumar_puntos();
                         }
-                        if(bandera == 2 && !aux[1].getIcono().getImage().equals(null) && aux[0].getLado() == true ){
+                        if(controlador == 2 && !aux[1].getIcono().getImage().equals(null) && aux[0].getLado() == true ){
                             voltear();//Si no coinciden las imagenes
                         }else if(aux[0].getLado() == false &&  aux[1].getLado() == false){
                             cambiar_turno();      //Si voltea la misma imgen
