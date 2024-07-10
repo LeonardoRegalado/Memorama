@@ -170,13 +170,6 @@ public class Tablero{
                 
                 cartas[i][j] = new Casilla(i, j, "play/memorama/fondo.jpg");
                 cartas[i][j].getBoton().setPreferredSize(new Dimension(150, 140));
-            
-                // Obtener el icono y escalar la imagen al tamaño del botón
-                ImageIcon icono = cartas[i][j].getIcono();
-                Image imagenEscalada = icono.getImage().getScaledInstance(150, 140, Image.SCALE_SMOOTH);
-                icono = new ImageIcon(imagenEscalada);
-                cartas[i][j].setIcono(icono);
-               
                 int a = cartas[i][j].getI();
                 int b = cartas[i][j].getJ();
 
