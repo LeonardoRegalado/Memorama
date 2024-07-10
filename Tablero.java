@@ -152,9 +152,8 @@ public class Tablero{
         turnos++;
         controlador++;//5
         controlador = controlador % 4;
-        if (controlador <= 0) { 
-            jugador = !(jugador); 
-        }
+        if (controlador == 0) jugador = !(jugador);
+        
         if (jugador) {
             texto[6].setText("Jugador 2");
         }else{
