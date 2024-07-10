@@ -152,8 +152,8 @@ public class Tablero{
         turnos++;
         bandera++;//5
         bandera = bandera % 4;
-        if (bandera <= 0) {
-            jugador = !(jugador);
+        if (bandera <= 0) { 
+            jugador = !(jugador); 
         }
         if (jugador) {
             texto[6].setText("Jugador 2");
