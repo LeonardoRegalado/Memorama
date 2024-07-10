@@ -30,7 +30,7 @@ public class Tablero{
     public static int bandera = 0,turnos;
     public static boolean jugador = false;
     public static ImageIcon fondos = new ImageIcon("play/memorama/fondo.jpg");
-    public static int rango = 0, suma;
+    public static int rango, suma;
 
     public static void sumar_puntos(){
         if (jugador) {
