@@ -152,7 +152,7 @@ public class Tablero{
         turnos++;
         bandera++;//5
         bandera = bandera % 4;
-        if (bandera == 0) {
+        if (bandera <= 0) {
             jugador = !(jugador);
         }
         if (jugador) {
