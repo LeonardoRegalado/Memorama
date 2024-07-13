@@ -71,7 +71,7 @@ public class Tablero{
         controlador = 4;
         for ( i = 0; i < 2; i++) aux[i] = new Casilla();
     }
-
+    //algotimo para modificar el estado del turno
     public static void voltear() {
         Timer timer = new Timer(1600, new ActionListener() {
             @Override
@@ -218,6 +218,7 @@ public class Tablero{
             }
         }
     }
+    
     public static void main(String[] args) {
         resultado.setSize(380,120);
         resultado.setLocationRelativeTo(null);
