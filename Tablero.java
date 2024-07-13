@@ -164,12 +164,11 @@ public class Tablero{
     public static void inicializar(){
         for ( i = 0; i < 8; i++) {
             for ( j = 0; j < 5; j++){  
-                
+            
                 cartas[i][j] = new Casilla(i, j, "play/memorama/fondo.jpg");
                 cartas[i][j].getBoton().setPreferredSize(new Dimension(150, 140));
                 int a = cartas[i][j].getI();
                 int b = cartas[i][j].getJ();
-
 
                 cartas[i][j].getBoton().addActionListener(new ActionListener(){
                     @Override
@@ -201,6 +200,7 @@ public class Tablero{
             }
         }
     }
+    
     public static void memorama(){
         agregar_cartas();
         rango = 40;
@@ -231,9 +231,8 @@ public class Tablero{
             panelMarcadores.add(texto[k]).setFont(new Font("Arial", Font.BOLD, 30));
 
         }
-        for ( i = 0; i < 2; i++) {
-            aux[i] = new Casilla();
-        }
+        for ( i = 0; i < 2; i++) aux[i] = new Casilla();
+        
         ventana.add(panelMarcadores, BorderLayout.NORTH); 
         ventana.add(panelDeContenido,BorderLayout.CENTER);
         texto[0].setText(" Puntuación   ");
